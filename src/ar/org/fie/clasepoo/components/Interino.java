@@ -16,9 +16,9 @@ public class Interino extends Docente{
     
     //PRE: Recibe un apellido:String, sueldoAdicional:float, fechaDeIngreso:String, fechaDeFinalizacion:String
     //POS: Crea una instancia de Interino
-    public Interino(String apellido, float adicional, String fechaIngreso, String fechaFin)
+    public Interino(String apellido, float sueldoBasico, float adicional, String fechaIngreso, String fechaFin)
     {
-        super(apellido);
+        super(apellido, sueldoBasico);
         this.fechaIncorporacion = fechaIngreso;
         this.fechaFin = fechaFin;
         this.adicional = adicional;
