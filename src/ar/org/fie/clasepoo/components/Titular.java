@@ -7,22 +7,29 @@ package ar.org.fie.clasepoo.components;
 
 
 /**
- *
+ * @version 1.0.1
  * @author bauti
  */
 public class Titular extends Docente {
     private int antiguedad;
     
-    //PRE: Recibe un String como apellido y un entero con la antiguedad en años
-    //POS: Crea una instancia de docente Titular
+    /** Crea una instancia de Docente Titular
+     * 
+     * @param apellido Apellido del Docente
+     * @param sueldoBasico Sueldo basico del Docente
+     * @param antiguedad Antiguedad del Docente en anios
+     */
     public Titular(String apellido, float sueldoBasico, int antiguedad)
     {
         super(apellido, sueldoBasico);
         this.antiguedad = antiguedad;
     }
     
-    //PRE: - 
-    //POS: Devuelve el sueldo del docente
+    /**
+     * 
+     * @return el valor correspondiente al sueldo que debe cobrar
+     */
+    @Override
     public float calcularSueldo()
     {
         float sueldoBruto = this.sueldoBasico;

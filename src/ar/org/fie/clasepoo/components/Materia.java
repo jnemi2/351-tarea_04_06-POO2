@@ -6,7 +6,7 @@
 package ar.org.fie.clasepoo.components;
 
 /**
- *
+ * @version 1.0.1
  * @author bauti
  */
 public class Materia {
@@ -15,8 +15,13 @@ public class Materia {
     private String modulo; //año de cursada
     private int cantidadInscriptos;
     
-    //PRE: Recibe el nombre:String, codigo:String, módulo:String, y la cantidadDeInscriptos:int
-    //POS: Crea una instancia de Materia
+    /** Crea una instancia de Materia
+     * 
+     * @param nombre Nombre de la Materia
+     * @param codigo Codigo de la Materia
+     * @param modulo Anio correspondiente a la materia
+     * @param inscriptos Cantidad de alumnos inscriptos a la Materia
+     */
     public Materia(String nombre, String codigo, String modulo, int inscriptos)
     {
         this.nombre = nombre;
@@ -25,11 +30,14 @@ public class Materia {
         this.cantidadInscriptos = inscriptos;
     }
     
-    //PRE: - 
-    //POS: Devuelve un String con El nombre, año y cantidad de alumnos
+    /**
+     * 
+     * @return Una descripcion con el nombre, anio y cantidad de alumnos
+     */
     public String getDescripcion()
     {
-        String text = this.nombre + " Año: " + this.modulo + " Alumnos: " + this.cantidadInscriptos;
+        String text = "(" + this.codigo + ") " + this.nombre + " Año: " 
+                + this.modulo + " Alumnos: " + this.cantidadInscriptos;
         return text;
     }
 

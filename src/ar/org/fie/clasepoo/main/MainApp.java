@@ -7,13 +7,12 @@ package ar.org.fie.clasepoo.main;
 
 import ar.org.fie.clasepoo.components.Facultad;
 import ar.org.fie.clasepoo.components.Carrera;
-import ar.org.fie.clasepoo.components.Docente;
 import ar.org.fie.clasepoo.components.Titular;
 import ar.org.fie.clasepoo.components.Interino;
 import ar.org.fie.clasepoo.components.Materia;
 
 /**
- *
+ * @version 1.0.1
  * @author bauti
  */
 public class MainApp {

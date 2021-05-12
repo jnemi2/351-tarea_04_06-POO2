@@ -6,28 +6,37 @@
 package ar.org.fie.clasepoo.components;
 
 /**
- *
+ * @version 1.0.1
  * @author bauti
  */
 public abstract class Docente {
     protected String apellido;
     protected float sueldoBasico = 30000;
     
-    //PRE: Recibe un String como apellido
-    //POS: Crea una instancia de Docente
+    /** Construye una instancia de un objeto que hereda de Docente
+     * 
+     * @param apellido Apellido del docente
+     * @param sueldoBasico Sueldo basico del docente
+     */
     public Docente(String apellido, float sueldoBasico)
     {
         this.apellido = apellido;
         this.sueldoBasico = sueldoBasico;
     }
     
-    //PRE: -
-    //POS: Devuelve el apellido de la instancia de Docente
+    /**
+     * 
+     * @return el apellido del Docente
+     */
     public String getApellido()
     {
         return this.apellido;
     }
     
+    /**
+     * 
+     * @return el valor correspondiente al sueldo que debe cobrar
+     */
     public abstract float calcularSueldo();
 
 }

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * @version 1.0.1
  * @author bauti
  */
 public class Carrera {
@@ -17,8 +17,11 @@ public class Carrera {
     private int plan;
     private List<Materia> materias;
     
-    //PRE: Recibe el nombre:String, y el plan:int
-    //POS: Crea una instancia de Carrera
+    /** Crea una instancia de Carrera
+     * 
+     * @param nombre Nombre de la Carrera
+     * @param plan Anio del plan de la Carrera
+     */
     public Carrera(String nombre, int plan)
     {
         this.nombre = nombre;
@@ -26,18 +29,23 @@ public class Carrera {
         materias = new ArrayList<>();
     }
     
-    //PRE: -
-    //POS: Devuelve un String con el programa de la carrera
+    /**
+     * 
+     * @return Una descripcion de la Carrera 
+     */
     public String getPrograma()
     {
-        String programa = "Carrera: " + this.nombre + " Plan: " + this.plan + '\n';
+        String programa = "Carrera: " + this.nombre + " Plan: " 
+                + this.plan + '\n';
         for (int i = 0; i < this.materias.size(); i++)
             programa = programa + this.materias.get(i).getDescripcion() + '\n';
         return programa;
     }
     
-    //PRE: Recibe una instancia de Materia
-    //POS: Agrega el objeto a la lista de materias de la carrera
+    /**
+     * 
+     * @param materia Una instancia de Materia a agregar a la Carrera
+     */
     public void agregarMateria(Materia materia)
     {
         this.materias.add(materia);
