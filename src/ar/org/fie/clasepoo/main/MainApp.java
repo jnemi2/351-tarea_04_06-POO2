@@ -27,12 +27,12 @@ public class MainApp {
         //Creo una instancia de Facultad
         Facultad miFacultad = new Facultad("FIE", "Cabildo 15", "+541123456789");
         
-        miFacultad.agregarDocente(new Titular("Gonzales", 2));
-        miFacultad.agregarDocente(new Titular("Roca", 5));
-        miFacultad.agregarDocente(new Titular("Mitre", 11));
-        miFacultad.agregarDocente(new Interino("Hamilton", 5500, "2020/03/01", "2021/06/26"));
-        miFacultad.agregarDocente(new Interino("Harper", 7500, "2020/03/01", "2021/06/26"));
-        miFacultad.agregarDocente(new Interino("Mulroney", 5595, "2020/03/01", "2021/06/26"));
+        miFacultad.agregarDocente(new Titular("Gonzales", 30000, 2));
+        miFacultad.agregarDocente(new Titular("Roca", 30000, 5));
+        miFacultad.agregarDocente(new Titular("Mitre", 30000, 11));
+        miFacultad.agregarDocente(new Interino("Hamilton", 30000, 5500, "2020/03/01", "2021/06/26"));
+        miFacultad.agregarDocente(new Interino("Harper", 30000, 7500, "2020/03/01", "2021/06/26"));
+        miFacultad.agregarDocente(new Interino("Mulroney", 30000, 5595, "2020/03/01", "2021/06/26"));
 
         //Creo dos instancias de Carrera y las agrego a la instancia de Facultad
         Carrera carreraTemp = new Carrera("Informatica", 2015);

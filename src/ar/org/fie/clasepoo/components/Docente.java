@@ -11,13 +11,14 @@ package ar.org.fie.clasepoo.components;
  */
 public abstract class Docente {
     protected String apellido;
-    protected static float sueldoBasico = 30000;
+    protected float sueldoBasico = 30000;
     
     //PRE: Recibe un String como apellido
     //POS: Crea una instancia de Docente
-    public Docente(String apellido)
+    public Docente(String apellido, float sueldoBasico)
     {
         this.apellido = apellido;
+        this.sueldoBasico = sueldoBasico;
     }
     
     //PRE: -

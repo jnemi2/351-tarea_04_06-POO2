@@ -15,9 +15,9 @@ public class Titular extends Docente {
     
     //PRE: Recibe un String como apellido y un entero con la antiguedad en años
     //POS: Crea una instancia de docente Titular
-    public Titular(String apellido, int antiguedad)
+    public Titular(String apellido, float sueldoBasico, int antiguedad)
     {
-        super(apellido);
+        super(apellido, sueldoBasico);
         this.antiguedad = antiguedad;
     }
     
