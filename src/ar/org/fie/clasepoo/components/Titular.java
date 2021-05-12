@@ -12,7 +12,11 @@ package ar.org.fie.clasepoo.components;
  */
 public class Titular extends Docente {
     private int antiguedad;
-    
+    private final int ANTIGUEDAD_INFERIOR = 5; //Limite años antiguedad inferior
+    private final int ANTIGUEDAD_SUPERIOR = 10;//Limite años antiguedad superior
+    private final float ADICIONAL_BAJO = 5000; //Sueldo extra bajo
+    private final float ADICIONAL_MEDIO = 8000;//Sueldo extra medio
+    private final float ADICIONAL_ALTO = 12000;//Sueldo extra alto
     /** Crea una instancia de Docente Titular
      * 
      * @param apellido Apellido del Docente
@@ -33,12 +37,12 @@ public class Titular extends Docente {
     public float calcularSueldo()
     {
         float sueldoBruto = this.sueldoBasico;
-        if (this.antiguedad < 5)
-            sueldoBruto += 5000;
-        else if (this.antiguedad < 10)
-            sueldoBruto += 8000;
+        if (this.antiguedad < ANTIGUEDAD_INFERIOR)
+            sueldoBruto += ADICIONAL_BAJO;
+        else if (this.antiguedad < ANTIGUEDAD_SUPERIOR)
+            sueldoBruto += ADICIONAL_MEDIO;
         else
-            sueldoBruto += 12000;
+            sueldoBruto += ADICIONAL_ALTO;
         
         return sueldoBruto;
     }
