@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * @version 1.0.1
  * @author bauti
  */
 public class Facultad {
@@ -19,8 +19,11 @@ public class Facultad {
     private List<Docente> docentes;
     private List<Carrera> carreras;
     
-    //PRE: Recibe el nombre, direccion y telefono de la Facultad
-    //POS: Contruye una instancia del objeto con los datos recibidos
+    /** Constructor de Facultad
+     * @param nombre El nombre de la Facultad
+     * @param direccion Direccion de la Facultad
+     * @param tel Telefono de la Facultad
+     */
     public Facultad(String nombre, String direccion, String tel)
     {
         this.nombre = nombre;
@@ -30,45 +33,55 @@ public class Facultad {
         carreras = new ArrayList<>();
     }
     
-    //PRE: Recibe una instancia de Docente
-    //POS: Agrega el objeto a la lista de docentes
+    /**
+     * Agrega un docente a la lista de la Facultad
+     * @param docente objeto Docente a incorporar 
+     */
     public void agregarDocente(Docente docente)
     {
         docentes.add(docente);
     }
     
-    //PRE: Recibe una instancia de Carrera
-    //POS: Agrega el objeto a la lista de carreras
+    /**
+     * Agrega una carrera a la Facultad
+     * @param carrera objeto Carrera a agregar
+     */
     public void agregarCarrera(Carrera carrera)
     {
         carreras.add(carrera);
     }
     
-    //PRE: -
-    //POS: Devuelve un String con el total de sueldos a pagar y el detalle por docente
+    /**
+     * 
+     * @return La nomina de sueldos a pagar de la Facultad. 
+     */
     public String calcularSueldos()
     {
         String resumen = "";
         float sueldos = 0;
-        Docente d;
+        Docente docente;
         for (int i = 0; i < this.docentes.size(); i++)
         {
-            d = this.docentes.get(i);
-            float sueldo = d.calcularSueldo();
+            docente = this.docentes.get(i);
+            float sueldo = docente.calcularSueldo();
             //sueldos acumula el total de sueldos
             sueldos += sueldo;
             //resumen acumula las nóminas de los docentes
-            resumen = resumen + d.getApellido() + ", $" + sueldo + '\n';
+            resumen = resumen + docente.getApellido() + ", $" + sueldo + '\n';
         }
         
         //se agrega el total de sueldos a pagar al principio de resumen
-        resumen = "La Facultad " + this.nombre + " tiene " + this.docentes.size() + " docentes, y un total a pagar de: $" + sueldos + "\n\n" + resumen;
+        resumen = "La Facultad " + this.nombre + " tiene "
+                + this.docentes.size() + " docentes, y un total a pagar de: $"
+                + sueldos + "\n\n" + resumen;
         
         return resumen;
     }
     
-    //PRE: -
-    //POS: Devuelve un String con los programas de las carreras de la Facultad
+    /**
+     * 
+     * @return El programa de las carreras de la Facultad
+     */
     public String getProgramas()
     {
         String programa = "Facultad: " + this.nombre + "\n\n";
